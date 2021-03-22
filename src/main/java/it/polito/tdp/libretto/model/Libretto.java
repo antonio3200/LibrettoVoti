@@ -10,6 +10,7 @@ public class Libretto {
 	
 	public Libretto() {
 		this.voti= new ArrayList<Voto>();
+		System.out.println("Sono Libretto e sono vivo");
 	}
 	public void add(Voto v) {
 		this.voti.add(v);
@@ -34,6 +35,17 @@ public class Libretto {
     	  risultato.add(v);
       }
       }
+		return risultato;
+	}
+	
+	public Voto ricercaCorso(String nomeCorso) {
+		Voto risultato= null;
+		for(Voto v: this.voti) {
+			if(v.getNome().equals(nomeCorso)) {
+				risultato=v;
+				break;
+			}
+		}
 		return risultato;
 	}
 	
