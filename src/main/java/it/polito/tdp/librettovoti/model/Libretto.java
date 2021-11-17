@@ -8,6 +8,7 @@ public class Libretto {
 	private List<Voto> voti;
 	public Libretto() {
 		this.voti= new ArrayList<>();
+		System.out.println("Sono Libretto e sono vivo");
 	}
 	public void add(Voto v) {
 		this.voti.add(v);
@@ -39,6 +40,22 @@ public class Libretto {
 		for(Voto v : this.voti) {
 			if(v.getVoto()==punteggio)
 				risultato.add(v);
+		}
+		return risultato;
+	}
+	/**
+	 * ricerca un voto per il corso di cui è specificato il nome
+	 * @param nomeCorso
+	 * @return
+	 */
+	
+	public Voto ricercaCorso(String nomeCorso) {
+		Voto risultato= null;
+		for(Voto v : this.voti) {
+			if(v.getNome().equals(nomeCorso)) {
+				risultato=v;
+			    break;
+			}
 		}
 		return risultato;
 	}

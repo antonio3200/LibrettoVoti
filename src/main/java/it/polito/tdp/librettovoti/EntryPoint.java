@@ -3,7 +3,7 @@ package it.polito.tdp.librettovoti;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 
-import it.polito.tdp.libretto.model.Libretto;
+import it.polito.tdp.librettovoti.model.Libretto;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
